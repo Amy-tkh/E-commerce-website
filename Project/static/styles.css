@@ -1,0 +1,143 @@
+body {
+  background-color: #F4F9FF
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-item a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-item a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-group {
+  display: flex;
+  column-gap: 16px;
+  padding: 50px;
+}
+
+/* I learned this from https://pin.it/5Ck0lJt */
+.card {
+  flex: 0 0 300px;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  color: #F4F9FF;
+  font-size: 200%;
+  background-image: linear-gradient(85deg, #1B1B3E, #262626);
+  padding: 32px;
+  box-shadow: -16px 0 32px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  transition: transform 250ms;
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.card:hover {
+  transform: translate(-8px, -16px)
+    rotate(3deg);
+}
+
+.card:hover ~ .card {
+  transform: translate(130px);
+}
+
+.nav-item {
+  text-decoration-line: none;
+  list-style-type: none;
+  margin: 0px 10px;
+}
+
+.navbar-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  color: #000;
+}
+
+.navbar-collapse {
+  flex-basis: 100%;
+  flex-grow: 0;
+  align-items: center;
+}
+
+.navbar-side {
+  display: flex;
+  color: #F4F9FF;
+}
+
+#nav_icon {
+  height: 7%;
+  width: 7%;
+}
+
+.mainPageTable {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.tableHead {
+  background-color: #bebfc4;
+  padding: 0.5%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px  #000;
+}
+
+.tableBody {
+  background-color: #F4F9FF;
+  padding: 0.2%;
+  height: 5%;
+  width: 1%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #000;
+}
+
+.tableBody:hover {
+  background-color: #fff;
+}
+
+#rowPurchaseImage {
+  height: 30%;
+  width: 30%;
+}
+
+.addForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.container {
+  flex: 1 0 230px;
+}
+
+#add_button {
+  flex: 1 0 10px;
+}
+
+#deleteButton {
+  appearance: none;
+  border: 0;
+  color: #1B1B3E;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  line-height: 1;
+  padding: 1em 1.5em;
+  position: relative;
+  transition: filter var(--motion-duration);
+}
+
+#deleteButton:hover {
+  transform: translate(-8px, -16px)
+}

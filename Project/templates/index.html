@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+<form action="/" method="post">
+    <table class="mainPageTable">
+            <thead>
+                <tr>
+                    <th class="tableHead">Image</th>
+                    <th class="tableHead">Customer</th>
+                    <th class="tableHead">Time</th>
+                    <th class="tableHead">Price</th>
+                    <th class="tableHead">Website</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for purchase in purchases %}
+                  <tr>
+                    <td class="tableBody"><img src="{{ purchase["picture_url"] }}" alt="Purchase Image" id="rowPurchaseImage"></td>
+                    <td class="tableBody">{{ purchase["customer_name"] }}</td>
+                    <td class="tableBody">{{ purchase["purchase_date"] }}</td>
+                    <td class="tableBody">{{ purchase["price"] }}</td>
+                    <td class="tableBody"><a href="{{ purchase['original_website_url'] }}">{{ purchase['original_website_url'] }}</a></td>
+                  </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                </tr>
+            </tfoot>
+    </table>
+</form>
+{% endblock %}

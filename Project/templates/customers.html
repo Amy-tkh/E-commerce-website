@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Customers
+{% endblock %}
+
+{% block main %}
+    <form action="/customers" method="post">
+        {% for customer in customers %}
+            <div class="card-group">
+              <article class="card">
+                <h1>{{ customer['customer_name'] }}</h1>
+                <a href="/purchase_history/{{ customer['customer_name'] }}">View Purchase History</a>
+              </article>
+            </div>
+        {% endfor %}
+    </form>
+{% endblock %}
